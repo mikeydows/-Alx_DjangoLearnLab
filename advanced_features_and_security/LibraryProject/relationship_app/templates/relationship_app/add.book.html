@@ -1,0 +1,8 @@
+<!-- templates/relationship_app/add_book.html -->
+<h2>Add a New Book</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Add Book</button>
+</form>
+<a href="{% url 'book_list' %}">Back to Book List</a>
